@@ -15,9 +15,9 @@ Please note: You can't play toons with this app! To do this, you will need the f
 
 This project comprises 3 modules: spotifyjs, mainjs and authenticatejs
 
-**spotifyjs** provides the communications service for getting basic information from the Spotify API
-**mainjs** provides list, update and detail states
-**authenticatejs** provides authenticate_intro and authenticate_secure states
+**spotifyjs** provides the communications service for getting basic information from the Spotify API  
+**mainjs** provides list, update and detail states  
+**authenticatejs** provides authenticate_intro and authenticate_secure states  
 
 mainjs:list comes first and presents you with an input box in the header, and an authenticate button in the footer.
 
