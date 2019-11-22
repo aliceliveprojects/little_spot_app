@@ -5,9 +5,11 @@ It interfaces to the spotify API.
 To use, you must have: 
 
 * [Spotify Developer Account](https://developer.spotify.com/dashboard/)
+
+Optionally:
 * [Heroku account](https://www.heroku.com/)
 
-You will need to deploy an extra server. The server is used as part of the authentication process, and keeps the CLIENT SECRET of your Spotify account safe. You can find a deployable example [here](https://github.com/aliceliveprojects/little_spot_authentication_server)
+You will need to deploy an extra server. The server is used as part of the authentication process, and keeps the CLIENT SECRET of your Spotify account safe. You can find a deployable example [here](https://github.com/aliceliveprojects/little_spot_authentication_server), which you can deploy on Heroku, or locally.
 
 Please note: You can't play toons with this app! To do this, you will need the following plugin: [cordova-spotify](https://festify.github.io/cordova-spotify/)
 
@@ -35,10 +37,11 @@ Also shows how we can simply add new states and modules and move between them.
 
 ## Quick Start
 
-ionic cordova platform add android@6.3.0
-
-ionic cordova run android
-
+1. Obtain a Spotify client id
+2. Deploy the little_spotify_authentication_server, locally, or on Heroku
+3. Edit the file /www/js/app_specific/authenticate/credentials.service.js
+4. ionic cordova platform add android@6.3.0
+5. ionic cordova run android
 
 ### Notes
 
