@@ -35,6 +35,8 @@ The app is the barest of bones as we just needed it quickly - but it works, and 
 
 Also shows how we can simply add new states and modules and move between them.
 
+Note: Authorised staff can find test credentials [here](https://github.com/CMDT/DigitalLabs_TeachingProjects/tree/master/docs/accounts/alice/spotify)
+
 ## Quick Start
 
 1. Obtain a Spotify client id
