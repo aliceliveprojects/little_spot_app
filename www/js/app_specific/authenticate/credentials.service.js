@@ -25,6 +25,7 @@
             // using your Spotify developer account's CLIENT SECRET
             // you can find source code here:
             // https://github.com/aliceliveprojects/little_spot_authentication_server
+            // ONCE YOU HAVE ADDED THESE VALUES, DO NOT CHECK THIS FILE IN.
             exchangeServiceUri: 'YOUR TOKEN EXCHANGE URL HERE',
             clientId: 'YOUR SPOTIFY CLIENT ID HERE'
         };
