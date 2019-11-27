@@ -1,36 +1,49 @@
-# little_one_drive_app
+# little_spot_app
 A simple (read: thrown-together) ionic + cordova app which builds on [little_list](https://github.com/AliceDigitalLabs/little_list).
+It interfaces to the spotify API. 
 
-Comprises 2 modules: mainjs and authenticatejs
+To use, you must have: 
 
-**mainjs** provides list, update and detail states
+* [Spotify Developer Account](https://developer.spotify.com/dashboard/)
 
-**authenticatejs** provides authenticate_intro and authenticate_secure states
+Optionally:
+* [Heroku account](https://www.heroku.com/)
+
+You will need to deploy an extra server. The server is used as part of the authentication process, and keeps the CLIENT SECRET of your Spotify account safe. You can find a deployable example [here](https://github.com/aliceliveprojects/little_spot_authentication_server), which you can deploy on Heroku, or locally.
+
+Please note: You can't play toons with this app! To do this, you will need the following plugin: [cordova-spotify](https://festify.github.io/cordova-spotify/)
+
+This project comprises 3 modules: spotifyjs, mainjs and authenticatejs
+
+**spotifyjs** provides the communications service for getting basic information from the Spotify API  
+**mainjs** provides list, update and detail states  
+**authenticatejs** provides authenticate_intro and authenticate_secure states  
 
 mainjs:list comes first and presents you with an input box in the header, and an authenticate button in the footer.
 
-The Authenticate button takes you to a OneDrive login. We have tested login against ...@ad.mmu.ac.uk accounts, which seem to work OK. The access token from the login is stored in local storage and is available from the authenticateSrvc.getAuthInfo() at any point afterward. Please note, we don't check for access token expiry; just hit authenticate again, when the download no long works... 
+The Authenticate button takes you to a Spotify login.  The access token from the login is stored in local storage and is available from the authenticateSrvc.getAuthInfo() at any point afterward. 
 
-Once back to the mains:list state again, the input box can be used to type a path. Data is fetched when the input box submits (hit return when you're typing)
+Once back to the mains:list state again, the input box can be used to type a term. Currently, it's interpreted as being an artist name, but use the [Spotify API docs](https://developer.spotify.com/documentation/web-api/reference/search/search/) to improve as you like. 
 
-If you leave the input box empty, the root is assumed. The app moves to the mainjs:update to query the OneDrive API.
+Data is fetched when the input box submits (hit return when you're typing)
 
-If anything is found at the path, it is downloaded and checked for type. 
+If anything is found from the search, it is listed.
 
-If an array, it's assumed that the path is a folder, and the list is populated with the names of the items within it.
-
-If an object, it's assumed that the path is to a file, and the app moves to the mainjs:detail state, and simply attempts to put the data found into a detail view. Works great with text - not so great with video files ;-)
+Pressing on an itemin the list view will do a fetch on that specific item, and go to the detail view.
 
 The app is the barest of bones as we just needed it quickly - but it works, and shows how easily the list-detail paradigm of Ionic can be  purposed.
 
 Also shows how we can simply add new states and modules and move between them.
 
+Note: Authorised staff can find test credentials [here](https://github.com/CMDT/DigitalLabs_TeachingProjects/tree/master/docs/accounts/alice/spotify)
+
 ## Quick Start
 
-ionic cordova platform add android@6.3.0
-
-ionic cordova run android
-
+1. Obtain a Spotify client id
+2. Deploy the little_spotify_authentication_server, locally, or on Heroku
+3. Edit the file /www/js/app_specific/authenticate/credentials.service.js
+4. ionic cordova platform add android@6.3.0
+5. ionic cordova run android
 
 ### Notes
 
