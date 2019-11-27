@@ -15,18 +15,13 @@
 
         var service = {
            
-            
+            clientId: '8c1a070c8624472f99201cf8bf8847c6',
             redirectShort: "http://localhost/callback",
             redirectUri: "http://localhost/callback.html",
-            scopes: "streaming",
+            scopes: "streaming, user-read-playback-state",
             authServiceUri: "https://accounts.spotify.com/authorize",
+            exchangeServiceUri: "https://alice-spotify-auth.herokuapp.com:443/spotify/exchange"
             
-            // you'll need to deploy a server which contacts Spotify to exchange a primary token, obtained from authServiceUri
-            // using your Spotify developer account's CLIENT SECRET
-            // you can find source code here:
-            // https://github.com/aliceliveprojects/little_spot_authentication_server
-            exchangeServiceUri: 'YOUR TOKEN EXCHANGE URL HERE',
-            clientId: 'YOUR SPOTIFY CLIENT ID HERE'
         };
 
 

@@ -90,6 +90,53 @@
         }
 
 
+        service.playItem = function(itemUri){
+            var token = null;
+
+            try {
+                var authInfo = authenticateSrvc.getAuthInfo();
+                token = authInfo.access_token;
+            } catch (e) {
+                // ignore this. Pass null to async function. Allow to fail there.
+            }
+
+
+            return new Promise(function (resolve, reject) {
+                spotifySrvc.playItem(token, itemUri)
+                    .then(
+                        function (response) {
+                            resolve(response);
+                        })
+                    .catch(function (error) {
+                        reject(error);
+                    });
+            });
+        }
+
+        service.pauseItem = function(){
+            var token = null;
+
+            try {
+                var authInfo = authenticateSrvc.getAuthInfo();
+                token = authInfo.access_token;
+            } catch (e) {
+                // ignore this. Pass null to async function. Allow to fail there.
+            }
+
+
+            return new Promise(function (resolve, reject) {
+                spotifySrvc.pauseItem(token)
+                    .then(
+                        function (response) {
+                            resolve(response);
+                        })
+                    .catch(function (error) {
+                        reject(error);
+                    });
+            });
+        }
+
+
 
         service.getTerm = function () {
             return _term;
