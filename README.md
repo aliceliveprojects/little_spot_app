@@ -23,8 +23,8 @@ Little Spot App lets you do three things:
 - [Ionic](<https://ionicframework.com/docs/v1/>)
 - [Gradle](<https://gradle.org/install/>)
 - [Android Studio](<https://developer.android.com/studio>)
-- [Server]()
-- [Heroku Account]()(Optional)
+- [Server](https://github.com/aliceliveprojects/little_spot_authentication_server)
+- [Heroku Account](https://www.heroku.com/)(Optional)
 
 ### Getting Started
 
@@ -56,7 +56,7 @@ Little Spot App lets you do three things:
 
    Once you have chosen node.js, you will be brought to the launch.json file.
 
-4. Now is the time to add your environment variables(config vars) what needs to be added can be [found here](<https://github.com/TEE-EMM97/little_spot_authentication_server>). Ending result will look similar to this: 
+4. Now is the time to add your environment variables(config vars) what needs to be added can be [found here](https://github.com/aliceliveprojects/little_spot_authentication_server). Ending result will look similar to this: 
 
    ```
    {
@@ -105,7 +105,7 @@ Little Spot App lets you do three things:
 
 ### Filling in Client Details
 
-For Filling in Client Details see [little_one_drive_app]()
+For Filling in Client Details see [little_one_drive_app](https://github.com/aliceliveprojects/little_one_drive_app#filling-in-client-details)
 
 Get `exchangeServiceUri:` URL from your servers UI this can be found by adding /docs to the URL given to your server.
 
@@ -115,4 +115,4 @@ For Android deployment see [little_list](<https://github.com/aliceliveprojects/l
 
 ### Deployment on iOS
 
-For iOS deployment see [little_list](<https://github.com/aliceliveprojects/little_list#quick-start>)
+For iOS deployment see [little_one_drive_app](https://github.com/aliceliveprojects/little_one_drive_app#deployment-on-ios)
