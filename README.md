@@ -116,3 +116,7 @@ For Android deployment see [little_list](<https://github.com/aliceliveprojects/l
 ### Deployment on iOS
 
 For iOS deployment see [little_one_drive_app](https://github.com/aliceliveprojects/little_one_drive_app#deployment-on-ios)
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://gist.github.com/PurpleBooth/LICENSE.md) file for details
